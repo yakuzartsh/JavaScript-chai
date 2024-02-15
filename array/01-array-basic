@@ -1,0 +1,36 @@
+const myarr = [0,1,2,3,4,5,6]
+// console.log(myarr);
+
+// const myheros = ["shaktiman", "jugnooji"]
+
+// const myarr2 = new Array(1,2,3,78,4,5)
+// console.log(myarr2);
+
+//Array methods
+
+// myarr.push(34)
+// myarr.pop()
+// myarr.unshift(9) // insert into start take O(n)time
+// myarr.shift() //remove first element
+// console.log(myarr);
+
+// console.log(myarr.includes(45));//false
+// console.log(myarr.indexOf(5));
+
+
+// const newArr = myarr.join()
+// console.log(typeof newArr);// converted into string 
+// console.log( newArr);// 
+
+const sectionofArray = myarr.slice(1,4) // output - [ 1, 2, 3 ]
+console.log(sectionofArray);
+console.log("A->",myarr);
+
+
+
+const sectionofArray2 = myarr.splice(2,4) //output - [ 1, 2, 3, 4 ]
+console.log(sectionofArray2); 
+console.log("B->",myarr); 
+//splice change original array also
+//  myarr contain other elements than splice (elements not present in sectionofArray2)
+

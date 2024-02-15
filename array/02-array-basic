@@ -1,0 +1,48 @@
+const marvel_heros = ["Thor","Ironman","spiderman"]
+const dc_heros = ["flash","batman","superman"]
+
+// ---------1st method to join an array but not get desireble ouput we get array into arrya--------------
+
+// marvel_heros.push(dc_heros)
+// console.log(marvel_heros); //output [ 'Thor', 'Ironman', 'spiderman', [ 'flash', 'batman', 'superman' ] ]
+//not joined (array into array now, marvel_heroes contain 4 element 4th element is array)
+
+// -------2nd method to join an array----------
+
+// const allheroes = marvel_heros.concat(dc_heros)
+// console.log(allheroes); 
+// correct method to join two array using concat 
+// output
+// [ 'Thor', 'Ironman', 'spiderman', 'flash', 'batman', 'superman' ]
+
+
+// ---------  3rd USING SPREAD OPERATOR (to join an array) --------------
+
+const all_new_heros = [...marvel_heros,...dc_heros]
+console.log(all_new_heros);
+// output
+// [ 'Thor', 'Ironman', 'spiderman', 'flash', 'batman', 'superman' ]
+
+// -------------------------------------------
+//flatten the complete array into another array
+const another_array = [1,2,3,[4,5,6],8,[8,5,6,[5,8,91]],122]
+const usable_another_array = another_array.flat(Infinity)
+console.log(usable_another_array);
+// output : [
+//     1,   2, 3, 4, 5, 6,
+//     8,   8, 5, 6, 5, 8,
+//    91, 122
+//  ]
+// ---------------------------------------------------------------
+// console.log(Array.isArray("Ritesh"));
+// console.log(Array.from("Ritesh"));
+// output : false
+// [ 'R', 'i', 't', 'e', 's', 'h' ]
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+let score4 = 400
+
+console.log(Array.of(score1,score2,score3,score4));
+// output : [ 100, 200, 300, 400 ]

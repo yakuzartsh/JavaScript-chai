@@ -1,0 +1,54 @@
+//singelton
+Object.create
+
+
+//object literals
+
+
+
+const mysymbol = Symbol("key1")
+
+const jsuser = {
+     name : "Ritesh",
+     "fullname": "Ritesh Kumar Gupta",
+    //how to use symbol in object
+    [mysymbol] : "jadu",
+
+     age : 25,
+     sex : "male",
+     email : "ritesh@gmail.com",
+     isLoggedIn : false,
+     lastloginDays : ["Monday","Saturday"]
+
+}
+
+// console.log(jsuser.name);
+// console.log(jsuser.email);
+// console.log(jsuser["email"]);
+// console.log(jsuser.fullname);
+// console.log(jsuser[mysymbol]);
+
+
+// jsuser.email = "ritesh@gpt.com"
+// console.log(jsuser.email);
+// Object.freeze(jsuser) // after freeze no one can change the object contents
+// jsuser.email = "ritesh@microsoft.com"
+// console.log(jsuser.email);
+
+
+
+jsuser.greeting = function(){
+    console.log("hello js user");
+}
+jsuser.greeting2 = function(){
+    console.log(`hello js user, ${this.fullname} and my age is ${this.age} hai`);
+}
+
+// console.log(jsuser.greeting);
+console.log(jsuser.greeting()); 
+// output : hello js user
+// undefined
+
+// console.log(jsuser.greeting2()); 
+// output: hello js user, Ritesh Kumar Gupta and my age is 25 hai
+// undefined

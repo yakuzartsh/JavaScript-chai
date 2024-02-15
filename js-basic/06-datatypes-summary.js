@@ -1,4 +1,4 @@
-// primitive
+// primitive - use stack memory
 
             // 7 types ::
             // 1. string
@@ -8,7 +8,7 @@
             // 5. undefined
             // 6. BigInt
             // 7. symbol
-//Refrences (Non Primitive)
+//Refrences (Non Primitive) use heap memory
         // 1.Array
         // 2. object
         // 3. function 
@@ -28,3 +28,7 @@ let obj1 = {
  console.log(heros);
  console.log(obj1.name);
  myfun(5)
+
+
+//  -----------------+++-----stack and heap ---------------
+
